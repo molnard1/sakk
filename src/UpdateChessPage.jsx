@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { Navigate } from "react-router-dom";
 
-export default function UpdatePizzaPage() {
+export default function UpdateChessPage() {
     const [item, setItem] = useState({
         name: "",
         birth_date: "",
@@ -59,7 +59,7 @@ export default function UpdatePizzaPage() {
             {navigateAway ? <Navigate to="/" replace={true} /> :
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3">
-                        <label htmlFor="formPizzaName" className="form-label">Név</label>
+                        <label htmlFor="formName" className="form-label">Név</label>
                         <input
                             required
                             type="text"
@@ -68,11 +68,11 @@ export default function UpdatePizzaPage() {
                             value={item.name}
                             onChange={handleChange}
                             className="form-control"
-                            id="formPizzaName"
+                            id="formName"
                         />
                     </div>
                     <div className="mb-3">
-                        <label htmlFor="formPizzaURL" className="form-label">Link</label>
+                        <label htmlFor="formProfileUrl" className="form-label">Link</label>
                         <input
                             required
                             type="text"
@@ -81,11 +81,11 @@ export default function UpdatePizzaPage() {
                             value={item.profile_url}
                             onChange={handleChange}
                             className="form-control"
-                            id="formPizzaURL"
+                            id="formProfileUrl"
                         />
                     </div>
                     <div className="mb-3">
-                        <label htmlFor="formLocation" className="form-label">Megnyert világbajnokságok száma</label>
+                        <label htmlFor="formWorldChWon" className="form-label">Megnyert világbajnokságok száma</label>
                         <input
                             required
                             type="text"
@@ -94,11 +94,11 @@ export default function UpdatePizzaPage() {
                             value={item.world_ch_won}
                             onChange={handleChange}
                             className="form-control"
-                            id="formLocation"
+                            id="formWorldChWon"
                         />
                     </div>
                     <div className="mb-3">
-                        <label htmlFor="formPrice" className="form-label">Születési dátum</label>
+                        <label htmlFor="formBirthDate" className="form-label">Születési dátum</label>
                         <input
                             required
                             type="text"
@@ -107,20 +107,20 @@ export default function UpdatePizzaPage() {
                             value={item.birth_date}
                             onChange={handleChange}
                             className="form-control"
-                            id="formPrice"
+                            id="formBirthDate"
                         />
                     </div>
                     <div className="mb-3">
-                        <label htmlFor="formMinNights" className="form-label">Kép URL</label>
+                        <label htmlFor="formImageURL" className="form-label">Kép URL</label>
                         <input
                             required
                             type="text"
                             name="image_url"
-                            placeholder="5"
+                            placeholder="https://example.com/image.jpg"
                             value={item.image_url}
                             onChange={handleChange}
                             className="form-control"
-                            id="formMinNights"
+                            id="formImageURL"
                         />
                     </div>
                     <button type="submit" className="btn btn-success" style={{ marginRight: '10px' }}>

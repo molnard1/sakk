@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 
-export default function DeletePizzaPage() {
+export default function DeleteChessPage() {
   const [navigateAway, setNavigateAway] = useState(false);
   const [sakkozo, setSakkozo] = useState({});
 

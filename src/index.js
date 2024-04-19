@@ -1,12 +1,12 @@
 import React from "react";
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ListPizzaPage from "./ListPizzaPage";
-import CreatePizzaPage from "./NewPizzaPage";
-import UpdatePizzaPage from "./UpdatePizzaPage";
-import DeletePizzaPage from "./DeletePizzaPage";
+import ListChessPage from "./ListChessPage";
+import CreateChessPage from "./NewChessPage";
+import UpdateChessPage from "./UpdateChessPage";
+import DeleteChessPage from "./DeleteChessPage";
 import NavbarComponent from "./NavbarComponent";
-import SinglePizzaPage from "./SinglePizzaPage";
+import SingleChessPage from "./SingleChessPage";
 import 'bootstrap/dist/css/bootstrap.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
 
@@ -18,27 +18,27 @@ const router = createBrowserRouter([
 		children: [
 			{
 				path: "/",
-				element: <ListPizzaPage />,
+				element: <ListChessPage />,
 			},
 			{
 				path: "/create",
-				element: <CreatePizzaPage />,
+				element: <CreateChessPage />,
 			},
 			{
 				path: "/:id",
-				element: <SinglePizzaPage />,
+				element: <SingleChessPage />,
 			},
 			{
 				path: "/:id/edit",
-				element: <UpdatePizzaPage />,
+				element: <UpdateChessPage />,
 			},
 			{
 				path: "/:id/delete",
-				element: <DeletePizzaPage />
+				element: <DeleteChessPage />
 			},
 			{
 				path: "*",
-				element: <ListPizzaPage />
+				element: <ListChessPage />
 			}
 		]
     }

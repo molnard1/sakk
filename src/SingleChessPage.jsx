@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 
-export default function SinglePizzaPage() {
+export default function SingleChessPage() {
     const [item, setItem] = useState({
         name: "",
         birth_date: "",

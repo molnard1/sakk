@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from 'axios';
 import { Navigate } from "react-router-dom";
 
-export default function CreatePizzaPage() {
+export default function CreateChessPage() {
   const [navigateAway, setNavigateAway] = useState(false);
   const [item, setItem] = useState({
     name: "",
@@ -43,7 +43,7 @@ export default function CreatePizzaPage() {
       {navigateAway ? <Navigate to="/" replace={true} /> :
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label htmlFor="formPizzaName" className="form-label">Név</label>
+            <label htmlFor="formName" className="form-label">Név</label>
             <input
               required
               type="text"
@@ -52,11 +52,11 @@ export default function CreatePizzaPage() {
               value={item.name}
               onChange={handleChange}
               className="form-control"
-              id="formPizzaName"
+              id="formName"
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="formPizzaURL" className="form-label">Link</label>
+            <label htmlFor="formProfileUrl" className="form-label">Link</label>
             <input
               required
               type="text"
@@ -65,11 +65,11 @@ export default function CreatePizzaPage() {
               value={item.profile_url}
               onChange={handleChange}
               className="form-control"
-              id="formPizzaURL"
+              id="formProfileUrl"
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="formLocation" className="form-label">Megnyert világbajnokságok száma</label>
+            <label htmlFor="formWorldChWon" className="form-label">Megnyert világbajnokságok száma</label>
             <input
               required
               type="text"
@@ -78,11 +78,11 @@ export default function CreatePizzaPage() {
               value={item.world_ch_won}
               onChange={handleChange}
               className="form-control"
-              id="formLocation"
+              id="formWorldChWon"
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="formPrice" className="form-label">Születési dátum</label>
+            <label htmlFor="formBirthDate" className="form-label">Születési dátum</label>
             <input
               required
               type="text"
@@ -91,11 +91,11 @@ export default function CreatePizzaPage() {
               value={item.birth_date}
               onChange={handleChange}
               className="form-control"
-              id="formPrice"
+              id="formBirthDate"
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="formMinNights" className="form-label">Kép URL</label>
+            <label htmlFor="formImageURL" className="form-label">Kép URL</label>
             <input
               required
               type="text"
@@ -104,7 +104,7 @@ export default function CreatePizzaPage() {
               value={item.image_url}
               onChange={handleChange}
               className="form-control"
-              id="formMinNights"
+              id="formImageURL"
             />
           </div>
 
